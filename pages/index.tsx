@@ -1,7 +1,11 @@
+import { GraphQLClient } from 'graphql-request';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
 const Home: NextPage = () => {
+
+    console.log(process.env.CONTENT_API);
+    
     return (
         <div>
             <Head>
