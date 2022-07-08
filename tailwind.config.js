@@ -9,10 +9,10 @@ module.exports = {
       colors: {
         cream: "#f9f0da",
         fire: "#ff2626",
-        navy: "#002f48",
+        navy: "#002F48",
       },
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif']
+        'sans': ['Poppins', 'sans-serif']
       },
     },
   },
