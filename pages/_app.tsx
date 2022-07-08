@@ -6,12 +6,12 @@ import Footer from '../components/Navigation/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <AppWrapper>
+        // <AppWrapper>
             <div className='min-h-screen overflow-hidden'>
                 <Component {...pageProps} />
                 <Footer />
             </div>
-        </AppWrapper>
+        // </AppWrapper>
     );
 }
 

@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Home: NextPage = ({ portfolios }: any) => {
-
+    
     return (
         <div>
             <Head>

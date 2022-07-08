@@ -46,11 +46,20 @@ export const CATEGORIES = gql`
     {
         portfolios {
             portfolioname
+            slug
             procat {
                 banner {
                     url
                 }
             }
+        }
+    }
+`;
+
+export const SINGLE = gql`
+    query GetSingleBySlug($slug: String!) {
+        portfolio(where: { slug: "3d" }) {
+            id
         }
     }
 `;
