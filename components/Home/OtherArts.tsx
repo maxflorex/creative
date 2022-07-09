@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { useRandom } from '../../hooks/useRandom';
 
 const OtherArts = ({ categories }: any) => {
     const Photo: any = useRandom('Photo', categories);
     const Printing: any = useRandom('Printing', categories);
-    
+
     return (
         <section className="grid grid-cols-3 gap-8 mb-32">
             <div className="relative w-full h-96">
@@ -20,9 +21,11 @@ const OtherArts = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center ">
                             <div className="absolute left-8 bottom-8 flex flex-col gap-4">
-                                <button className="btn">
-                                    {Printing[0].portfolioname}
-                                </button>
+                                <Link href={`/${Printing[0].slug}`}>
+                                    <a className="btn">
+                                        {Printing[0].portfolioname}
+                                    </a>
+                                </Link>
                             </div>
                         </div>
                     </>
@@ -40,9 +43,11 @@ const OtherArts = ({ categories }: any) => {
                         />
                         <div className="text-8xl text-white absolute h-full w-full flex items-center justify-center ">
                             <div className="absolute left-8 bottom-8 flex flex-col gap-2">
-                                <button className="btn">
-                                    {Photo[0].portfolioname}
-                                </button>
+                                <Link href={`/${Photo[0].slug}`}>
+                                    <a className="btn">
+                                        {Photo[0].portfolioname}
+                                    </a>
+                                </Link>
                             </div>
                         </div>
                     </>

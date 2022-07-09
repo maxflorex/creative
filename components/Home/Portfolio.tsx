@@ -25,8 +25,8 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-8xl text-white absolute h-full w-full flex items-center justify-center ">
                             <div className="absolute left-8 bottom-8 flex flex-col gap-2">
-                                <Link href={`/${D3.slug}`} className="btn">
-                                    {D3[0].portfolioname}
+                                <Link href={`/${D3[0].slug}`}>
+                                    <a className="btn">{D3[0].portfolioname}</a>
                                 </Link>
                             </div>
                         </div>
@@ -45,11 +45,10 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center ">
                             <div className="absolute left-8 bottom-8 flex flex-col gap-4">
-                                <Link
-                                    href={`/${Branding.slug}`}
-                                    className="btn"
-                                >
-                                    {Branding[0].portfolioname}
+                                <Link href={`/${Branding[0].slug}`}>
+                                    <a className="btn">
+                                        {Branding[0].portfolioname}
+                                    </a>
                                 </Link>
                             </div>
                         </div>
@@ -68,11 +67,10 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center ">
                             <div className="absolute left-8 bottom-8 flex flex-col gap-2">
-                                <Link
-                                    href={`/${Illustration.slug}`}
-                                    className="btn"
-                                >
-                                    {Illustration[0].portfolioname}
+                                <Link href={`/${Illustration[0].slug}`}>
+                                    <a className="btn">
+                                        {Illustration[0].portfolioname}
+                                    </a>
                                 </Link>
                             </div>
                         </div>
@@ -91,11 +89,10 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center">
                             <div className="absolute bottom-8 flex flex-col gap-4">
-                                <Link
-                                    href={`/${Logo.slog}`}
-                                    className="btn2  -mb-32"
-                                >
-                                    {Logo[0].portfolioname}
+                                <Link href={`/${Logo[0].slug}`}>
+                                    <a className="btn  -mb-32">
+                                        {Logo[0].portfolioname}
+                                    </a>
                                 </Link>
                             </div>
                         </div>
@@ -114,8 +111,8 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center ">
                             <div className="absolute left-8 bottom-8 flex flex-col gap-4">
-                                <Link href={`/${GD.slug}`} className="btn">
-                                    {GD[0].portfolioname}
+                                <Link href={`/${GD[0].slug}`}>
+                                    <a className="btn">{GD[0].portfolioname}</a>
                                 </Link>
                             </div>
                         </div>
@@ -134,8 +131,8 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center bg-black/40">
                             <div className="absolute left-8 bottom-8 flex flex-col gap-4">
-                                <Link href={`/${UX.slug}`} className="btn">
-                                    {UX[0].portfolioname}
+                                <Link href={`/${UX[0].slug}`}>
+                                    <a className="btn">{UX[0].portfolioname}</a>
                                 </Link>
                             </div>
                         </div>

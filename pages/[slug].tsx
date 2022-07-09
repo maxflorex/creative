@@ -1,39 +1,40 @@
-import { gql } from 'graphql-request';
-import React from 'react';
+import Error from '../components/Error';
 import { graphcms } from '../components/GraphCMS/GraphCMS';
-import { CATEGORIES } from '../components/GraphCMS/Queries';
-
-type Props = {};
+import { SINGLE } from '../components/GraphCMS/Queries';
+import Body from '../components/Single/Body';
+import Hero from '../components/Single/Hero';
+import Sidebar from '../components/Single/Sidebar';
 
 export const getServerSideProps = async (context: any) => {
     const slug = context.query.slug;
 
-    const query = gql`
-        query GetSingleBySlug($slug: String!) {
-            portfolio(where: { slug: $slug }) {
-                id
-            }
-        }
-    `
-
     const variables = {
-        slug
-    }
-    
+        slug,
+    };
 
-    const { portfolio } = await graphcms.request(query, variables);
+    const { portfolio } = await graphcms.request(SINGLE, variables);
 
     return {
         props: {
-            portfolio
-        }
-    }
+            portfolio,
+        },
+    };
 };
 
-const projectSingle = ({ portfolios }: any) => {
-    console.log(portfolios);
+const projectSingle = ({ portfolio }: any) => {
+    if (!portfolio) {
+        return <Error />;
+    }
 
-    return <div>Hellooooooo</div>;
+    return (
+        <div className='bg-stone-100'>
+            <Hero data={portfolio} />
+            <div className="container mx-auto flex justify-center py-24 xl:gap-40 lg:gap-32 md:gap-24 md:flex-row gap-16 flex-col">
+                <Sidebar data={portfolio} />
+                <Body data={portfolio} />
+            </div>
+        </div>
+    );
 };
 
 export default projectSingle;

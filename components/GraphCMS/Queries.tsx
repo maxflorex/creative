@@ -3,6 +3,7 @@ import { gql } from 'graphql-request';
 export const PROJECTS_ALL = gql`
     {
         projects(first: 20) {
+            id
             title
             url
             location
@@ -58,8 +59,27 @@ export const CATEGORIES = gql`
 
 export const SINGLE = gql`
     query GetSingleBySlug($slug: String!) {
-        portfolio(where: { slug: "3d" }) {
+        portfolio(where: { slug: $slug }) {
             id
+            procat {
+                banner {
+                    url
+                }
+                title
+                softwareused {
+                    ... on Software {
+                        id
+                        title
+                        logo {
+                            url
+                        }
+                    }
+                }
+                pictures {
+                    url
+                }
+            }
+            portfolioname
         }
     }
 `;

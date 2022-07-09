@@ -12,7 +12,7 @@ const Body = ({ categories }: Props) => {
     return (
         <div className="container mx-auto relative">
             <Portfolio categories={categories} />
-            <div className="h-96 flex flex-col items-center justify-center gap-2 my-32 bg-repeat bg-[url('/img/wild-sea.png')] bg-cream relative">
+            <div className="h-96 flex flex-col items-center justify-center gap-2 my-32 bg-repeat bg-[url('/wild-sea.png')] bg-cream relative bg-blend-soft-light">
                 <h1 className="text-3xl font-bold">I'm Max Flores</h1>
                 <p className="">A creative professional since 2011</p>
                 <Link href="/about" className='cursor-pointer'>
