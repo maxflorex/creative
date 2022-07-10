@@ -16,7 +16,7 @@ const Hero = (props: Props) => {
         >
             <div className="h-[40vh] flex flex-col justify-center items-center relative container mx-auto gap-4">
                 <p className="text-2xl text-fire">- About Me -</p>
-                <h1 className="text-white text-6xl">My Journey</h1>
+                <h1 className="text-white text-6xl px-8 text-center">My Journey</h1>
                 {/* <Image src={logo} alt="logo" /> */}
                 <div className="w-24 absolute flex flex-col justify-center -bottom-2 items-center">
                     <Link href="/">

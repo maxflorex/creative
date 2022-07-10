@@ -5,18 +5,18 @@ type Props = {};
 const Footer = (props: Props) => {
     return (
         <div
-            className="sticky top-full overflow-hidden"
+            className="sticky top-full overflow-hidden px-4"
             style={{
                 backgroundImage:
                     'url("https://www.transparenttextures.com/patterns/asfalt-dark.png',
             }}
         >
-            <div className="px-8 py-4  container mx-auto flex justify-between w-full items-center">
+            <div className="py-4  container mx-auto flex justify-between w-full items-center">
                 <p className="text-xs w-full">
                     <span className='font-bold'>© 2022 Max Flores</span> | All Rights Reserved
                 </p>
 
-                <div className="flex gap-4 w-full justify-end items-center">
+                <div className="flex gap-4 md:w-full justify-end items-center">
                     <a
                         href="https://maxflores.dev"
                         target="_blank"

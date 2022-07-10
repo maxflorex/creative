@@ -18,7 +18,7 @@ export const PROJECTS_ALL = gql`
             portfolio {
                 portfolioname
             }
-            summary {
+            description {
                 text
             }
             pictures {
@@ -61,6 +61,9 @@ export const SINGLE = gql`
     query GetSingleBySlug($slug: String!) {
         portfolio(where: { slug: $slug }) {
             id
+            description {
+                text
+            }
             procat {
                 banner {
                     url

@@ -5,10 +5,13 @@ type Props = {
 };
 
 const Sidebar = ({ data }: Props) => {
-    return <div className='md:w-64 md:max-w-[40rem] sticky top-8 w-full'>
+
+    console.log(data);
+    
+    return <div className='md:w-[32rem] sticky top-8 w-full'>
         <p>Projects</p>
         <h2 className='text-xl font-bold'>{data.portfolioname}</h2>
-        <p className='mt-8 text-justify'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, asperiores quidem, animi consequuntur perspiciatis recusandae odio veritatis eaque quia ullam itaque, illo hic iure?</p>
+        <p className='mt-8 text-justify leading-loose'>{data.description.text}</p>
     </div>;
 };
 

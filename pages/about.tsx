@@ -7,7 +7,7 @@ type Props = {};
 
 const About: NextPage = (props: Props) => {
     return (
-        <div>
+        <div className='px-4'>
             <Hero />
             <Body />
         </div>

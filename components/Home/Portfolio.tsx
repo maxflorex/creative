@@ -161,7 +161,7 @@ const Portfolio = ({ categories }: any) => {
                             objectFit="cover"
                             priority
                         />
-                        <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center bg-black/40">
+                        <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center">
                             <div className="absolute md:left-8 md:bottom-8 left-4 bottom-4 flex flex-col gap-4">
                                 <Link href={`/${UX[0].slug}`}>
                                     <a className="btn">{UX[0].portfolioname}</a>

@@ -16,7 +16,6 @@ const ExpandImageModal = ({ data, setShow }: Props) => {
     };
 
     console.log(data);
-    
 
     return (
         <div
@@ -32,7 +31,7 @@ const ExpandImageModal = ({ data, setShow }: Props) => {
                     />
                 </div>
             </div>
-            <span className="fixed top-8 right-8 px-4 py-2 bg-off-1 rounded-full font-semibold hover:bg-fire cursor-pointer dismiss duration-700 transition-all">
+            <span className="fixed px-2 py-1 md:top-8 md:right-8 top-4 right-4 bg-white rounded-full hover:bg-fire cursor-pointer dismiss text-xs">
                 Close
             </span>
         </div>

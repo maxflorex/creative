@@ -29,7 +29,7 @@ const projectSingle = ({ portfolio }: any) => {
     return (
         <div className='relative h-full px-4'>
             <Hero data={portfolio} />
-            <div className="container mx-auto flex justify-center py-24 xl:gap-40 lg:gap-32 md:gap-24 md:flex-row gap-16 flex-col">
+            <div className="container mx-auto flex justify-center py-24 lg:gap-32 md:gap-24 md:flex-row gap-16 flex-col">
                 <Sidebar data={portfolio} />
                 <Body data={portfolio} />
             </div>
