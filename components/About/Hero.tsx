@@ -1,12 +1,11 @@
 import Image from 'next/image';
-import xvw from '../../assets/mx-icon-line.svg';
 import Link from 'next/link';
+import React from 'react';
+import xvw from '../../assets/mx-icon-line.svg';
 
-type Props = {
-    data: any;
-};
+type Props = {};
 
-const Hero = ({ data }: Props) => {
+const Hero = (props: Props) => {
     return (
         <div
             className="bg-navy sticky top-0 -mx-4"
@@ -16,8 +15,8 @@ const Hero = ({ data }: Props) => {
             }}
         >
             <div className="h-[40vh] flex flex-col justify-center items-center relative container mx-auto gap-4">
-                <p className="text-2xl text-fire">- Projects -</p>
-                <h1 className="text-white text-6xl">{data.portfolioname}</h1>
+                <p className="text-2xl text-fire">- About Me -</p>
+                <h1 className="text-white text-6xl">My Journey</h1>
                 {/* <Image src={logo} alt="logo" /> */}
                 <div className="w-24 absolute flex flex-col justify-center -bottom-2 items-center">
                     <Link href="/">

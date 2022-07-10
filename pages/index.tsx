@@ -24,9 +24,9 @@ const Home: NextPage = ({ portfolios }: any) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main>
+            <main className='px-4'>
                 <Hero />
-                <div className="h-96 flex flex-col items-center justify-center gap-2">
+                <div className="md:h-96 h-56 flex flex-col items-center justify-center gap-2">
                     <h1 className="">For great graphic needs</h1>
                     <p className="text-3xl font-bold">
                         Greater creative solutions

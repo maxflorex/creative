@@ -20,7 +20,7 @@ const ExpandImageModal = ({ data, setShow }: Props) => {
 
     return (
         <div
-            className="fixed w-full h-full overflow-hidden bg-white/90 z-50 dismiss top-0 left-0 no-scrollbar backdrop-blur-sm"
+            className="fixed w-full h-full overflow-hidden bg-black/60 z-50 dismiss top-0 left-0 no-scrollbar backdrop-blur-sm"
             onClick={handleClick}
         >
             <div className="flex flex-col fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

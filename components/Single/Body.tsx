@@ -1,6 +1,8 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import ExpandImageModal from '../Modals/ExpandImageModal';
+import { item, variants } from '../Utils/animate';
 
 type Props = {
     data: any;
@@ -9,6 +11,7 @@ type Props = {
 const Body = ({ data }: Props) => {
     const [show, setShow] = useState(false);
     const [clicked, setClicked] = useState('');
+    const [showS, setShowS] = useState('');
 
     const handleClick = (pic: any) => {
         setClicked(pic);
@@ -19,7 +22,12 @@ const Body = ({ data }: Props) => {
     };
 
     return (
-        <div className="w-full min-h-96 flex flex-col gap-8">
+        <motion.div
+            className="w-full min-h-96 flex flex-col gap-8"
+            variants={variants}
+            initial="hidden"
+            animate="show"
+        >
             {data &&
                 data.procat.map((project: any, i: number) => {
                     return (
@@ -27,27 +35,54 @@ const Body = ({ data }: Props) => {
                             key={i}
                             className="h-full grid lg:grid-cols-2 gap-8"
                         >
-                            {/* <img
-                                src={project.banner.url}
-                                className="w-full h-auto"
-                              /> */}
-                            {project.pictures.map((pic: any, i: number) => (
-                                <div
+                            {project.pictures.map((pic: any, i: any) => (
+                                <motion.div
                                     key={i}
-                                    className="h-full flex flex-col gap-8"
-                                    >
+                                    className="h-full flex flex-col gap-8 relative"
+                                    onMouseEnter={() => setShowS(i)}
+                                    onMouseLeave={() => setShowS('')}
+                                    variants={item}
+                                >
                                     <img
                                         src={pic.url}
-                                        className="w-full opacity-70 hover:opacity-100 cursor-pointer"
+                                        className="w-full hover:scale-105 cursor-pointer"
                                         onClick={(e) => handleClick(pic)}
                                     />
-                                </div>
+                                    <div className="absolute top-4 right-4 flex gap-4">
+                                        <AnimatePresence>
+                                            {showS === i &&
+                                                project.softwareused.map(
+                                                    (s: any, i: number) => {
+                                                        return (
+                                                            <motion.img
+                                                                src={s.logo.url}
+                                                                className="w-12 h-12 object-contain"
+                                                                initial={{
+                                                                    y: 24,
+                                                                    opacity: 0,
+                                                                }}
+                                                                animate={{
+                                                                    y: 0,
+                                                                    opacity: 1,
+                                                                }}
+                                                                transition={{
+                                                                    duration: 0.3,
+                                                                    delay:
+                                                                        i * 0.2,
+                                                                }}
+                                                            />
+                                                        );
+                                                    }
+                                                )}
+                                        </AnimatePresence>
+                                    </div>
+                                </motion.div>
                             ))}
                         </div>
                     );
                 })}
             {show && <ExpandImageModal data={clicked} setShow={setShow} />}
-        </div>
+        </motion.div>
     );
 };
 
