@@ -35,7 +35,7 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-8xl text-white absolute h-full w-full flex items-center justify-center ">
                             <div className="absolute md:left-8 md:bottom-8 left-4 bottom-4 flex flex-col gap-2">
-                                <Link href={`/${D3[0].slug}`}>
+                                <Link href={`/${D3[0].slug}`} passHref>
                                     <a className="btn">{D3[0].portfolioname}</a>
                                 </Link>
                             </div>
@@ -58,7 +58,7 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center ">
                             <div className="absolute md:left-8 md:bottom-8 left-4 bottom-4 flex flex-col gap-4">
-                                <Link href={`/${Branding[0].slug}`}>
+                                <Link href={`/${Branding[0].slug}`} passHref>
                                     <a className="btn">
                                         {Branding[0].portfolioname}
                                     </a>
@@ -83,7 +83,7 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center ">
                             <div className="absolute md:left-8 md:bottom-8 left-4 bottom-4 flex flex-col gap-2">
-                                <Link href={`/${Illustration[0].slug}`}>
+                                <Link href={`/${Illustration[0].slug}`} passHref>
                                     <a className="btn">
                                         {Illustration[0].portfolioname}
                                     </a>
@@ -108,7 +108,7 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full md:flex items-center justify-center hidden">
                             <div className="absolute bottom-8 flex flex-col gap-4">
-                                <Link href={`/${Logo[0].slug}`}>
+                                <Link href={`/${Logo[0].slug}`} passHref>
                                     <a className="btn2  -mb-32">
                                         {Logo[0].portfolioname}
                                     </a>
@@ -117,7 +117,7 @@ const Portfolio = ({ categories }: any) => {
                         </div>
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center md:hidden">
                             <div className="absolute md:left-8 md:bottom-8 left-4 bottom-4 flex flex-col gap-4">
-                                <Link href={`/${GD[0].slug}`}>
+                                <Link href={`/${GD[0].slug}`} passHref>
                                     <a className="btn">{GD[0].portfolioname}</a>
                                 </Link>
                             </div>
@@ -140,7 +140,7 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center ">
                             <div className="absolute md:left-8 md:bottom-8 left-4 bottom-4 flex flex-col gap-4">
-                                <Link href={`/${GD[0].slug}`}>
+                                <Link href={`/${GD[0].slug}`} passHref>
                                     <a className="btn">{GD[0].portfolioname}</a>
                                 </Link>
                             </div>
@@ -163,7 +163,7 @@ const Portfolio = ({ categories }: any) => {
                         />
                         <div className="text-4xl text-white absolute h-full w-full flex items-center justify-center">
                             <div className="absolute md:left-8 md:bottom-8 left-4 bottom-4 flex flex-col gap-4">
-                                <Link href={`/${UX[0].slug}`}>
+                                <Link href={`/${UX[0].slug}`} passHref>
                                     <a className="btn">{UX[0].portfolioname}</a>
                                 </Link>
                             </div>

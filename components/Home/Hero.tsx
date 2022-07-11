@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React, { useRef } from 'react';
 import logo from '../../assets/mx-logo.svg';
 import xvw from '../../assets/mx-icon-line.svg';
 import { motion } from 'framer-motion';
@@ -7,12 +6,10 @@ import { motion } from 'framer-motion';
 type Props = {};
 
 const Hero = (props: Props) => {
-    const Top = useRef(null);
 
     return (
         <div
             className="bg-navy -mx-4"
-            ref={Top}
             style={{
                 backgroundImage:
                     'url("https://www.transparenttextures.com/patterns/asfalt-dark.png',

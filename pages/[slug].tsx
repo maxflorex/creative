@@ -22,12 +22,13 @@ export const getServerSideProps = async (context: any) => {
 };
 
 const projectSingle = ({ portfolio }: any) => {
+    
     if (!portfolio) {
         return <Error />;
     }
 
     return (
-        <div className='relative h-full px-4'>
+        <div className='h-full px-4'>
             <Hero data={portfolio} />
             <div className="container mx-auto flex justify-center py-24 lg:gap-32 md:gap-24 md:flex-row gap-16 flex-col">
                 <Sidebar data={portfolio} />

@@ -15,8 +15,6 @@ const ExpandImageModal = ({ data, setShow }: Props) => {
         }
     };
 
-    console.log(data);
-
     return (
         <div
             className="fixed w-full h-full overflow-hidden bg-black/60 z-50 dismiss top-0 left-0 no-scrollbar backdrop-blur-sm"

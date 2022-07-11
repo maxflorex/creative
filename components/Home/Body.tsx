@@ -14,7 +14,7 @@ const Body = ({ categories }: Props) => {
         <div className="container mx-auto relative">
             <Portfolio categories={categories} />
             <div
-                className="h-96 flex flex-col items-center justify-center gap-2 my-32 bg-repeat bg-white relative bg-opacity-50"
+                className="h-96 flex flex-col items-center justify-center gap-2 my-32 bg-repeat bg-white bg-opacity-50"
                 style={{
                     backgroundImage:
                         'url("https://www.transparenttextures.com/patterns/asfalt-dark.png',

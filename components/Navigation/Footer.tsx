@@ -5,7 +5,7 @@ type Props = {};
 const Footer = (props: Props) => {
     return (
         <div
-            className="sticky top-full overflow-hidden px-4"
+            className="overflow-hidden px-4"
             style={{
                 backgroundImage:
                     'url("https://www.transparenttextures.com/patterns/asfalt-dark.png',

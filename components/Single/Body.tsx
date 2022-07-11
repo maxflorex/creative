@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import Image from 'next/image';
 import React, { useState } from 'react';
 import ExpandImageModal from '../Modals/ExpandImageModal';
 import { item, variants } from '../Utils/animate';
@@ -38,7 +37,7 @@ const Body = ({ data }: Props) => {
                             {project.pictures.map((pic: any, i: any) => (
                                 <motion.div
                                     key={i}
-                                    className="h-full flex flex-col gap-8 relative"
+                                    className="h-full flex flex-col gap-8 relative overflow-hidden"
                                     onMouseEnter={() => setShowS(i)}
                                     onMouseLeave={() => setShowS('')}
                                     variants={item}
@@ -46,7 +45,7 @@ const Body = ({ data }: Props) => {
                                     <img
                                         src={pic.url}
                                         className="w-full hover:scale-105 cursor-pointer"
-                                        onClick={(e) => handleClick(pic)}
+                                        onClick={() => handleClick(pic)}
                                     />
                                     <div className="absolute top-4 right-4 flex gap-4">
                                         <AnimatePresence>
@@ -55,6 +54,7 @@ const Body = ({ data }: Props) => {
                                                     (s: any, i: number) => {
                                                         return (
                                                             <motion.img
+                                                                key={i}
                                                                 src={s.logo.url}
                                                                 className="w-12 h-12 object-contain"
                                                                 initial={{
