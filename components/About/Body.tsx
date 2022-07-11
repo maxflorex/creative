@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import me from '../../assets/MX - AVATAR - M.webp';
+import me from '../../assets//mxavatar.webp';
 import mx from '../../assets/maxAtWork.webp';
 
 type Props = {};
