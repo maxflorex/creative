@@ -33,7 +33,7 @@ const Body = ({ data }: Props) => {
                     return (
                         <div
                             key={i}
-                            className="h-full grid lg:grid-cols-2 gap-8"
+                            className="h-full flex flex-col md:grid lg:grid-cols-2 gap-8"
                         >
                             {project.pictures.map((pic: any, i: any) => (
                                 <motion.div
