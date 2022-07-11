@@ -1,13 +1,28 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Error from '../components/Error';
 import { graphcms } from '../components/GraphCMS/GraphCMS';
-import { SINGLE } from '../components/GraphCMS/Queries';
+import { CATEGORIES, SINGLE } from '../components/GraphCMS/Queries';
 import Body from '../components/Single/Body';
 import Hero from '../components/Single/Hero';
 import Sidebar from '../components/Single/Sidebar';
 
-export const getServerSideProps = async (context: any) => {
-    const slug = context.query.slug;
+export const getStaticPaths = async () => {
+    const { portfolios } = await graphcms.request(CATEGORIES);
+    const paths = portfolios.map((item: any) => {
+        return {
+            params: { slug: item.slug.toString() },
+        };
+    });
+
+    return {
+        paths,
+        fallback: false,
+    };
+};
+
+export const getStaticProps: GetStaticProps = async (context: any) => {
+    const slug = context.params.slug
 
     const variables = {
         slug,
