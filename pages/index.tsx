@@ -28,7 +28,7 @@ const Home: NextPage = ({ portfolios }: any) => {
                 <Hero />
                 <div className="md:h-96 h-56 flex flex-col items-center justify-center gap-2">
                     <h1 className="">For great graphic needs</h1>
-                    <p className="text-3xl font-bold">
+                    <p className="text-2xl md:text-3xl font-bold text-center">
                         Greater creative solutions
                     </p>
                 </div>
