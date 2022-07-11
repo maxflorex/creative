@@ -22,15 +22,14 @@ const Body = (props: Props) => {
                     objectFit="cover"
                     className="rounded-full opacity-80 hover:opacity-100"
                 />
-                <h1 className="text-3xl font-bold">I'm Max Flores</h1>
+                <h1 className="text-3xl font-bold">I&apos;m Max Flores</h1>
                 <p className="">A creative professional since 2011</p>
             </div>
             <div className="xl:w-1/3 md:w-2/3 w-full mx-auto relative">
                 <p className="leading-loose">
                     It all started back in 2008. after graduating high school, I
-                    was getting ready to go to college and I had decided that a
-                    career in graphic arts is what I wanted to do. So, there was
-                    me, a fresh student, ready to eat the world!
+                    knew I had to study something flexible and related to arts.
+                    So, there was me, a fresh student, ready to eat the world!
                 </p>
                 <p className="pb-16 leading-loose">
                     Due to multiple circumstances, I had to find a job to
@@ -53,13 +52,13 @@ const Body = (props: Props) => {
                     freelance jobs, designing and developing websites. I was
                     designing everything mostly in Figma and developing in
                     WordPress. However, the more work I was doing the faster I
-                    realized that I needed to start coding myself, so that's
+                    realized that I needed to start coding myself, so that&apos;s
                     when a new journey started.
                 </p>
                 <p className="pb-16 leading-loose">
                     I stopped all freelance activity to focus on this. So, I
                     started studying HTML, CSS & JavaScript. I did this for over
-                    a year! I'm grateful to have had the opportunity and the
+                    a year! I&apos;m grateful to have had the opportunity and the
                     time to taught myself coding, this has become one of my
                     biggest passions and achivements of life.
                 </p>

@@ -28,7 +28,7 @@ const Body = ({ categories }: Props) => {
                     objectFit="cover"
                     className="rounded-full opacity-80 hover:opacity-100"
                 />
-                <h1 className="text-3xl font-bold">I'm Max Flores</h1>
+                <h1 className="text-3xl font-bold">I&apos;m Max Flores</h1>
                 <p className="">A creative professional since 2011</p>
                 <Link href="/about" className="cursor-pointer">
                     <a className="btn3 mt-4">About me</a>
