@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Error from '../components/Error';
 import { graphcms } from '../components/GraphCMS/GraphCMS';
 import { SINGLE } from '../components/GraphCMS/Queries';
@@ -22,19 +23,25 @@ export const getServerSideProps = async (context: any) => {
 };
 
 const projectSingle = ({ portfolio }: any) => {
-    
     if (!portfolio) {
         return <Error />;
     }
 
     return (
-        <div className='h-full px-4'>
-            <Hero data={portfolio} />
-            <div className="container mx-auto flex justify-center py-24 lg:gap-32 md:gap-24 md:flex-row gap-16 flex-col">
-                <Sidebar data={portfolio} />
-                <Body data={portfolio} />
+        <>
+            <Head>
+                <title>{portfolio.portfolioname} - MF</title>
+                <meta name="Graphic Designer" content="Portfolio" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <div className="h-full px-4">
+                <Hero data={portfolio} />
+                <div className="container mx-auto flex justify-center py-24 lg:gap-32 md:gap-24 md:flex-row gap-16 flex-col">
+                    <Sidebar data={portfolio} />
+                    <Body data={portfolio} />
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
