@@ -38,7 +38,7 @@ const Body = ({ data }: Props) => {
                             {project.pictures.map((pic: any, i: any) => (
                                 <motion.div
                                     key={i}
-                                    className="h-full flex flex-col gap-8 overflow-hidden"
+                                    className="h-96 w-full flex flex-col gap-8 overflow-hidden"
                                     onMouseEnter={() => setShowS(i)}
                                     onMouseLeave={() => setShowS('')}
                                     variants={item}
@@ -47,9 +47,7 @@ const Body = ({ data }: Props) => {
                                         src={pic.url}
                                         className="w-full hover:scale-105 cursor-pointer"
                                         onClick={() => handleClick(pic)}
-                                        width={120}
-                                        height={120}
-                                        layout="responsive"
+                                        layout="fill"
                                         objectFit="cover"
                                         blurDataURL={`/_next/image?url=${pic.url}&w=16&q=1`}
                                         placeholder='blur'
